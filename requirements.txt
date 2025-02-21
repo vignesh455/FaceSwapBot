@@ -1,8 +1,9 @@
+asyncio
+opencv-python
+insightface
 onnxruntime
-opennsfw2
-keras
 gfpgan
 aiogram==2.25.1
-insightface
-accelerate
 torchvision==0.16.2
+nest_asyncio
+python-dotenv
