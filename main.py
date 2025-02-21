@@ -12,7 +12,7 @@ import nest_asyncio
 nest_asyncio.apply()
 
 # Initialize the bot
-bot = Bot(token='7765671553:AAEoEER0JPeAr2j5rpC3J4YaPFWMSNtPma8')
+bot = Bot(token='Your_BOT_TOKEN')
 dp = Dispatcher(bot)
 dp.middleware.setup(LoggingMiddleware())
 
@@ -33,7 +33,7 @@ os.chdir('..')
 
 
 user_images = {}
-group_id = '@FaceSwap_profaker'
+group_id = 'Your or channel Telegram ID'
 # Directory to save the received images
 IMAGES_DIR = 'received_image'
 
@@ -119,7 +119,7 @@ async def start(message: types.Message):
     if member_info.status in ['member', 'administrator','creator']:
         await message.reply("Welcome to the image processing bot! Please send the TARGET IMAGE.\n\nNote: Face will be swapped from Source to Target image")
     else:
-        await message.reply("Please Join the group \nhttps://t.me/FaceSwap_profaker\n &  Start the bot again")
+        await message.reply("Please Join the group \nYour group link\n &  Start the bot again")
 
 @dp.message_handler(commands=['stop'])
 async def stop(message: types.Message):
@@ -139,7 +139,7 @@ async def restart(message: types.Message):
 
 @dp.message_handler(commands=['queue'])
 async def restart(message: types.Message):
-  if message.chat.id == 6367247327:
+  if message.chat.id == 'Admin id':
     try:
       await bot.send_message(message.chat.id, f"Active User: {len(active_users)}")
     except:
